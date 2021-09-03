@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Main {
+public class StringManipulation {
     public static void main(String[] args){
 
 //        List<Integer> subarray= getSubArray(new int[]{1,5,8,2,9,2,3,5,8,0}, 5);

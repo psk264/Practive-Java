@@ -1,3 +1,5 @@
+package OOP;
+
 public class MainEmployee {
     public static void main(String[] args){
         Employee employee1 = new Employee("Jane Doe", 23, 40000.00, Location.NEW_JERSEY);

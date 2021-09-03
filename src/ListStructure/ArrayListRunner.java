@@ -1,9 +1,9 @@
 package ListStructure;
 
-public class ListRunner {
+public class ArrayListRunner {
 
     public static void main(String[] args){
-        GroceryList shopriteList = new GroceryList();
+        ArrayListGroceryList shopriteList = new ArrayListGroceryList();
         shopriteList.addGroceryItem("Eggs");
         shopriteList.addGroceryItem("Milk");
         shopriteList.addGroceryItem("Flour");

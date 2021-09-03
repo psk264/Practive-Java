@@ -2,7 +2,7 @@ package ListStructure;
 
 import java.util.ArrayList;
 
-public class GroceryList {
+public class ArrayListGroceryList {
     private ArrayList<String> grocery = new ArrayList<String>();
 
     public void addGroceryItem(String item){
