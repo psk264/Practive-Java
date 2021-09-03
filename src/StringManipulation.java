@@ -14,26 +14,39 @@ public class StringManipulation {
 //        for(int n1:subarray){
 //            System.out.println(n1);
 //        }
-//        System.out.println(reverseString("m0"));
+        System.out.println("------Test reverseString() function-------");
+        System.out.println(reverseString("Hello World!"));
 
 //        DVD[] dvdCollections = new DVD[5];
 //        dvdCollections[0] = new DVD("Star wars", 1960, "war in the galaxy");
+        System.out.println("------Test isUnique() function-------");
+        System.out.println(isUnique("Priya"));
+        System.out.println(isUnique("Hello World"));
 
-//        System.out.println(isUnique("Priya"));
-//        System.out.println(isUnique("Hello World"));
-//        System.out.println(URLify("Mr John Smith   ", 13));
-//        System.out.println(compressedString("Priya"));
-//        System.out.println(compressedString("aaabbcbbbaa"));
-//        int[] output =  findSubsetEqualstoN(new int[] {6,1,3,4}, 7);
-//        for(int n : output) {
-//            System.out.println(n);
-//        }
-//        System.out.println(isRotationString("waterbottle", "erbottlewat"));
+        System.out.println("------Test URLify() function-------");
+        System.out.println(URLify("Mr John Smith   ", 13));
 
+        System.out.println("------Test compressedString() function-------");
+        System.out.println(compressedString("Priya"));
+        System.out.println(compressedString("aaabbcbbbaa"));
+
+        System.out.println("------Test findSubsetEqualstoN() function-------");
+        int[] output =  findSubsetEqualstoN(new int[] {6,1,3,4}, 7);
+        for(int n : output) {
+            System.out.println(n);
+        }
+
+        System.out.println("------Test isRotationString() function-------");
+        System.out.println(isRotationString("waterbottle", "erbottlewat"));
+
+        System.out.println("------Test joinStrings() function-------");
+        String[] input = {"Hello", "World!", "from", "NYC"};
+        System.out.println(joinStrings(input, false));
+        System.out.println(joinStrings(input, true));
 
     }
 
-    /** return reverse string
+    //return reverse string.  Another approach is to use Stringbuilder.reverse()
     public static String reverseString(String input){
         int n= input.length();
         if(n<=1) return input;
@@ -46,9 +59,9 @@ public class StringManipulation {
             n--;
         }
         return String.copyValueOf(output);
-    }      **/
+    }
 
-    /** Get subarry from given array
+    /** Get subarray from given array **/
     public static List<Integer> getSubArray(int[] numbers, int k){
         List<Integer> result = new ArrayList<Integer>();
 
@@ -59,10 +72,10 @@ public class StringManipulation {
         }
         return result;
 
-    }  **/
+    }
 
 
-    /** Check if a string has all unique chars**/
+    /** Check if a string has all unique chars **/
 
     public static boolean isUniqueString(String s){
         if(s.length()<=1) return true;
@@ -80,13 +93,13 @@ public class StringManipulation {
         int checker=0;
         for(int i=0;i<s.length();i++){
             int val=s.charAt(i) - 'a';
-            System.out.println(val);
+//            System.out.println(val);
             if((checker & (1 << val)) >0 ){
-                System.out.println(1 << val);
+//                System.out.println(1 << val);
                 return  false;
             }
           checker |= (1<<val);
-            System.out.println(checker);
+//            System.out.println(checker);
         }
         return true;
     }
@@ -182,5 +195,14 @@ public class StringManipulation {
 
    public static boolean isSubstring(String s1, String s2){
        return s1.contains(s2);
+   }
+
+   public static String joinStrings(String[] str_arr, boolean withSpace){
+       StringBuilder output = new StringBuilder();
+       for(String s : str_arr){
+           if(withSpace) output.append(s + " ");
+           else output.append(s);
+       }
+       return  output.toString();
    }
 }
