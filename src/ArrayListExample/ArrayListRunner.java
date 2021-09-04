@@ -1,4 +1,4 @@
-package ListStructure;
+package ArrayListExample;
 
 public class ArrayListRunner {
 
