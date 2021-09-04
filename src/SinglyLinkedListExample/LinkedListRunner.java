@@ -18,7 +18,7 @@ public class LinkedListRunner {
         printList(placesToVisit);
         placesToVisit.remove(4);
         printList(placesToVisit);
-        placesToVisit.sort();
+
     }
 
     private static void printList(LinkedList<String> placesToVisit){
